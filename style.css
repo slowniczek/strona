@@ -3,15 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Georgia', serif; /* Klasyczna typografia */
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f9f9f9; /* Subtelne tło */
+    color: #333; /* Klasyczny kolor tekstu */
     line-height: 1.6;
 }
 
+/* Kontener */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,9 +21,10 @@ body {
 
 /* Nagłówek */
 header {
-    background-color: #0044cc;
+    background-color: #003366; /* Elegancki granatowy */
     color: white;
-    padding: 15px 0;
+    padding: 20px 0;
+    border-bottom: 4px solid #004080; /* Subtelna granatowa linia */
 }
 
 header .container {
@@ -32,17 +34,20 @@ header .container {
 }
 
 .logo h1 {
-    font-size: 2em;
+    font-size: 2.5em; /* Większy, wyraźniejszy nagłówek */
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
@@ -50,34 +55,48 @@ nav ul li a {
     text-decoration: none;
     font-size: 1.1em;
     padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #002a80;
-    border-radius: 5px;
+    background-color: #004080; /* Jaśniejszy odcień granatowego */
+    border: 1px solid #003366; /* Delikatna obwódka */
 }
 
 /* Sekcje */
 section {
-    padding: 40px 0;
+    padding: 50px 20px;
     background-color: white;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Głębszy cień dla elegancji */
 }
 
 section h2 {
-    color: #0044cc;
-    font-size: 2em;
+    color: #003366; /* Ten sam granatowy kolor */
+    font-size: 2.5em; /* Powiększone nagłówki */
     margin-bottom: 20px;
+    border-bottom: 2px solid #003366; /* Podkreślenie nagłówków */
+    padding-bottom: 10px;
+}
+
+ul {
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 /* Stopka */
 footer {
-    background-color: #002a80;
+    background-color: #003366; /* Ten sam granatowy kolor */
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
+    border-top: 4px solid #004080; /* Subtelna granatowa linia */
 }
 
 footer p {
@@ -96,3 +115,11 @@ footer p {
     }
 
     nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+}
