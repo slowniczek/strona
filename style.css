@@ -3,86 +3,96 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Nagłówek */
 header {
     background-color: #0044cc;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav ul li {
     display: inline-block;
-    margin: 0 15px;
+    margin-left: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 5px 10px;
-    border-radius: 5px;
 }
 
 nav ul li a:hover {
     background-color: #002a80;
+    border-radius: 5px;
 }
 
 /* Sekcje */
 section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 40px 0;
     background-color: white;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
+    color: #0044cc;
     font-size: 2em;
     margin-bottom: 20px;
-    color: #0044cc;
 }
 
 /* Stopka */
 footer {
     background-color: #002a80;
     color: white;
+    padding: 10px 0;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+footer p {
+    font-size: 0.9em;
 }
 
 /* Dostosowanie na mniejsze ekrany */
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    header .container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    section {
-        padding: 20px;
+    nav ul {
+        padding-top: 10px;
     }
-}
+
+    nav ul li {
