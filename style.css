@@ -1,50 +1,125 @@
-/* Przycisk do rozwijania menu */
-#menu-toggle {
-    display: none;
-    background: #003366;
+/* Podstawowe ustawienia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif; /* Klasyczna typografia */
+}
+
+body {
+    background-color: #f9f9f9; /* Subtelne tło */
+    color: #333; /* Klasyczny kolor tekstu */
+    line-height: 1.6;
+}
+
+/* Kontener */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nagłówek */
+header {
+    background-color: #003366; /* Elegancki granatowy */
     color: white;
-    border: none;
-    font-size: 1.5em;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
+    padding: 20px 0;
+    border-bottom: 4px solid #004080; /* Subtelna granatowa linia */
 }
 
-/* Widoczność menu na urządzeniach mobilnych */
-nav ul {
+header .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul.active {
-    display: block;
-    background-color: #003366; /* Dopasowane tło menu */
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+.logo h1 {
+    font-size: 1.5em; /* Większy, wyraźniejszy nagłówek */
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 25px;
 }
 
 nav ul li a {
-    display: block;
-    padding: 10px;
     color: white;
     text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, border 0.3s;
 }
 
-/* Styl dla nawigacji w wersji mobilnej */
+nav ul li a:hover {
+    background-color: #004080; /* Jaśniejszy odcień granatowego */
+    border: 1px solid #003366; /* Delikatna obwódka */
+}
+
+/* Sekcje */
+section {
+    padding: 50px 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Głębszy cień dla elegancji */
+}
+
+section h2 {
+    color: #003366; /* Ten sam granatowy kolor */
+    font-size: 2.5em; /* Powiększone nagłówki */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #003366; /* Podkreślenie nagłówków */
+    padding-bottom: 10px;
+}
+
+ul {
+    margin: 20px 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* Stopka */
+footer {
+    background-color: #003366; /* Ten sam granatowy kolor */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-top: 4px solid #004080; /* Subtelna granatowa linia */
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Dostosowanie na mniejsze ekrany */
 @media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
+    header .container {
+        flex-direction: column;
+        text-align: center;
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 20px;
     }
 }
